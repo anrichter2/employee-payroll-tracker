@@ -12,20 +12,18 @@ const collectEmployees = function() {
     let employeeFirstName = window.prompt("Enter first name");
     let employeeLastName = window.prompt("Enter last name");
     let employeeSalary = window.prompt("Enter salary");
+    let numEmployeeSalary = 0
 
-    if (isNaN(employeeSalary)) {
-      return `not a number`;
-    } else {
-      let numEmployeeSalary = employeeSalary;
-      console.log(numEmployeeSalary);
+    if (!isNaN(employeeSalary)) {
+      numEmployeeSalary = parseInt(employeeSalary);
     }
 
-    employeesArray.push({firstName: employeeFirstName, lastName: employeeLastName, salary: parseInt(employeeSalary)})
+    employeesArray.push({firstName: employeeFirstName, lastName: employeeLastName, salary: numEmployeeSalary})
 
     addEmployee = window.confirm("Add another employee");
 
   }
-  console.log(employeesArray)
+  //console.log(employeesArray)
   return employeesArray
 }
 
@@ -46,7 +44,7 @@ const displayAverageSalary = function(employeesArray) {
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
   const index = Math.floor(Math.random() * employeesArray.length)
-  console.log(`Congradulations to ${employeesArray[index].firstName} ${employeesArray[index].lastName}, our random drawing winner`)
+  console.log(`Congratulations to ${employeesArray[index].firstName} ${employeesArray[index].lastName}, our random drawing winner`)
 }
 
 /*
