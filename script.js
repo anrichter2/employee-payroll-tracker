@@ -3,48 +3,56 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function() {
-  // TODO: Get user input to create and return an array of employee objects
+  // Created an empty employee array to put my employee data into
   const employeesArray = []
   
   let addEmployee = true
 
+  //Used while loop to collect employee data
   while (addEmployee) {
-    let employeeFirstName = window.prompt("Enter first name");
-    let employeeLastName = window.prompt("Enter last name");
-    let employeeSalary = window.prompt("Enter salary");
+    let employeeFirstName = window.prompt("Enter first name:");
+    let employeeLastName = window.prompt("Enter last name:");
+    let employeeSalary = window.prompt("Enter salary:");
+
+    //Created a variable that says numerically the employee salary equals 0
+    //Then used an if loop and isNaN method to check if the user inputed salary is a number.
+    //If the inputed salary is a number than the inputed salary is changed from a string to a number using parseInt and numEmployeeSalary is assigned that value
+    //If employeeSalary isn't a number than numEmployeeSalary stays 0
     let numEmployeeSalary = 0
 
     if (!isNaN(employeeSalary)) {
       numEmployeeSalary = parseInt(employeeSalary);
     }
 
+    //Used the push method to put my object of variables into the array of employeeArray
     employeesArray.push({firstName: employeeFirstName, lastName: employeeLastName, salary: numEmployeeSalary})
 
-    addEmployee = window.confirm("Add another employee");
-
+    addEmployee = window.confirm("Do you want to add another employee?");
   }
-  //console.log(employeesArray)
   return employeesArray
 }
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
-  // TODO: Calculate and display the average salary
+  //Created an index i and a variable salarySum equal to 0
   let i = 0;
   let salarySum = 0
+
+  //Used a while loop and the length of employeeArray to sum all of the salaries together and then divided the sum by employeeArray.length to get the average
   while (i < employeesArray.length) {
     salarySum = salarySum + employeesArray[i].salary;
     i++
   }
   const salaryAverage = salarySum/employeesArray.length;
-  console.log(`The average salary between our ${i} employee(s) is ${salaryAverage}`);
+  //Logs the average salary to the console using a template literal string
+  console.log(`The average employee salary between our ${employeesArray.length} employee(s) is ${salaryAverage}`);
 }
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  // TODO: Select and display a random employee
+  //Used the math object and the random and floor methods to create a random index variable. Then used the index variable in a template literal string to select and display a winner to the console
   const index = Math.floor(Math.random() * employeesArray.length)
-  console.log(`Congratulations to ${employeesArray[index].firstName} ${employeesArray[index].lastName}, our random drawing winner`)
+  console.log(`Congratulations to ${employeesArray[index].firstName} ${employeesArray[index].lastName}, our random drawing winner!`)
 }
 
 /*
