@@ -10,11 +10,12 @@ N/A
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Below is a screenshot of my payroll tracker at work with some employees added. The console is also open on the right so that you can see that the application has the employee information logged in an array, the average employee salary is logged, and the application picked a random winner from the employee list.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+![screenshot of working payroll tracker](assets/images/employee-payroll-tracker-photo.png)
 
-![alt text](assets/images/screenshot.png)
+Link to the deployed webpage:
+[deployed webpage URL](https://anrichter2.github.io/employee-payroll-tracker/)
 
 ## Credits
 
