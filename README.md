@@ -12,7 +12,7 @@ N/A
 
 Below is a screenshot of my payroll tracker at work with some employees added. The console is also open on the right so that you can see that the application has the employee information logged in an array, the average employee salary is logged, and the application picked a random winner from the employee list.
 
-![screenshot of working payroll tracker](assets/images/employee-payroll-tracker-photo.png)
+![screenshot of working payroll tracker](assets/Images/employee-payroll-tracker-photo.png)
 
 Link to the deployed webpage:
 [deployed webpage URL](https://anrichter2.github.io/employee-payroll-tracker/)
